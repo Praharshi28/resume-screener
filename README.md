@@ -1,92 +1,84 @@
-# RecruitAI – Resume Screener
+# RecruitAI – AI Resume Screener
 
-An AI-powered resume screening web app that ranks candidates against a job description using Claude AI.
+An AI-powered resume screening web app that ranks candidates based on how well their resumes match a job description.
+
+Built with vanilla HTML, CSS, and JavaScript — no frameworks, no build tools, runs directly in the browser.
 
 ---
 
-## 📁 Files
+## Features
+
+- Upload multiple resumes as `.txt` files
+- Paste any job description
+- AI ranks candidates by match score (0–100%)
+- Shows strengths, gaps, and hiring recommendation per candidate
+- Clean dark UI with animated score bars
+
+---
+
+## Tech Stack
+
+- HTML / CSS / JavaScript (vanilla)
+- Cohere API (`command-r-08-2024`) for AI analysis
+- No frameworks, no build step needed
+
+---
+
+## How to Run Locally
+
+### Option 1 – VS Code Live Server
+1. Install [VS Code](https://code.visualstudio.com/) and the **Live Server** extension
+2. Right-click `index.html` → **Open with Live Server**
+3. Opens at `http://127.0.0.1:5500`
+
+### Option 2 – Python
+```bash
+python -m http.server 8080
+```
+Then open `http://localhost:8080`
+
+---
+
+## How to Use
+
+1. Get a free Cohere API key at [dashboard.cohere.com](https://dashboard.cohere.com) (no credit card needed)
+2. Paste your API key in the app
+3. Enter a job description
+4. Upload `.txt` resume files
+5. Click **Screen Resumes**
+
+> To convert a PDF resume to .txt: open PDF → Select All → Copy → paste into Notepad → Save as `.txt`
+
+---
+
+## Project Structure
 
 ```
 resume-screener/
-├── index.html              ← Main webpage
-├── style.css               ← All styles
-├── app.js                  ← All logic
-├── sample-resume-john.txt  ← Sample resume for testing
-├── sample-resume-priya.txt ← Sample resume for testing
+├── index.html               # Main page
+├── style.css                # All styles
+├── app.js                   # Logic & Cohere API integration
+├── sample-resume-john.txt   # Sample resume (experienced)
+├── sample-resume-priya.txt  # Sample resume (fresher)
 └── README.md
 ```
 
 ---
 
-## 🚀 How to Run
+## Screenshots
 
-### Option 1 – Just open in browser (simplest)
-1. Double-click `index.html`
-2. It will open in your browser
+<img width="918" height="1002" alt="image" src="https://github.com/user-attachments/assets/58817d17-172f-49dc-8474-6eb77407d5fc" />
 
-> ⚠️ Note: Some browsers block API calls when opening files directly (CORS issues). If it doesn't work, use Option 2.
+<img width="917" height="1011" alt="image" src="https://github.com/user-attachments/assets/92356c35-2646-47be-b48c-3aa3d0b09ff2" />
 
 ---
 
-### Option 2 – Use VS Code Live Server (recommended)
-1. Install [VS Code](https://code.visualstudio.com/)
-2. Install the **Live Server** extension
-3. Right-click `index.html` → **Open with Live Server**
-4. The site opens at `http://127.0.0.1:5500`
+## Live Demo
+
+https://resume-screener-brown.vercel.app/
 
 ---
 
-### Option 3 – Use Python local server
-```bash
-# Navigate to the project folder
-cd resume-screener
+## License
 
-# Python 3
-python -m http.server 8080
-
-# Then open: http://localhost:8080
-```
-
----
-
-## 🔑 Getting an Anthropic API Key
-
-1. Go to [console.anthropic.com](https://console.anthropic.com)
-2. Sign up / Log in
-3. Go to **API Keys** → **Create Key**
-4. Copy the key (starts with `sk-ant-...`)
-5. Paste it into the app when prompted
-
-> Your key is only used client-side to call Anthropic's API directly. It is never stored anywhere.
-
----
-
-## 📄 Resume Format
-
-Resumes must be uploaded as `.txt` files.
-
-To convert a PDF resume to .txt:
-- Open the PDF → Select All → Copy → Paste into Notepad → Save as .txt
-
----
-
-## 🧪 Testing
-
-Two sample resumes are included:
-- `sample-resume-john.txt` — experienced developer
-- `sample-resume-priya.txt` — fresher/junior developer
-
-Try this job description to test:
-```
-We are looking for a Frontend Developer with 2+ years of experience in React and TypeScript. 
-The candidate should be comfortable with REST API integration, Git, and agile workflows. 
-Experience with Next.js or Node.js is a plus.
-```
-
----
-
-## ⚠️ Known Limitations
-
-- Only `.txt` resumes are supported (not PDF directly)
-- Max recommended: 10 resumes per screening (API token limits)
-- Requires a valid Anthropic API key with available credits
+MIT
