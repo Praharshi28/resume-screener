@@ -1,0 +1,32 @@
+John Smith
+john.smith@email.com | +1 (555) 123-4567 | linkedin.com/in/johnsmith | github.com/johnsmith
+
+SUMMARY
+Frontend Developer with 4 years of experience building scalable web applications using React, TypeScript, and Node.js. Passionate about clean code and great user experiences.
+
+EXPERIENCE
+
+Senior Frontend Developer — TechCorp Inc. (2022–Present)
+- Led development of a React + TypeScript dashboard used by 50,000+ users
+- Reduced page load time by 40% through code splitting and lazy loading
+- Mentored 3 junior developers and conducted regular code reviews
+- Built RESTful API integrations with Node.js and Express
+
+Frontend Developer — StartupXYZ (2020–2022)
+- Built responsive UI components with React and Tailwind CSS
+- Integrated third-party APIs (Stripe, Twilio, Google Maps)
+- Wrote unit and integration tests with Jest and React Testing Library
+- Collaborated in Agile sprints using Jira and GitHub
+
+SKILLS
+Languages: JavaScript, TypeScript, HTML, CSS, Python (basic)
+Frameworks: React, Next.js, Node.js, Express
+Tools: Git, Webpack, Vite, Docker (basic), Figma
+Testing: Jest, React Testing Library, Cypress
+
+EDUCATION
+B.Sc. Computer Science — State University (2020)
+
+PROJECTS
+- OpenDash: Open-source analytics dashboard (500+ GitHub stars)
+- PortfolioAI: AI-powered portfolio generator using OpenAI API

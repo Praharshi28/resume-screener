@@ -1,0 +1,31 @@
+Priya Patel
+priya.patel@email.com | +91 98765 43210
+
+OBJECTIVE
+Recent Computer Science graduate looking for frontend development opportunities. Familiar with React and basic web development.
+
+EDUCATION
+B.E. Computer Engineering — Gujarat Technological University (2024)
+GPA: 8.2/10
+
+INTERNSHIP
+Web Development Intern — LocalAgency (June 2023 – Aug 2023)
+- Assisted in building a company website using HTML, CSS, and JavaScript
+- Fixed UI bugs in a React application
+- Learned Git basics and participated in team meetings
+
+SKILLS
+HTML, CSS, JavaScript, React (beginner), Python, MySQL, Git
+
+PROJECTS
+- Personal Portfolio Website (HTML/CSS/JS)
+- Todo App (React) — basic CRUD operations
+- Student Management System (Python + MySQL) — college project
+
+ACHIEVEMENTS
+- 2nd place, college hackathon 2023
+- Completed Udemy React course (2023)
+
+CERTIFICATIONS
+- freeCodeCamp Responsive Web Design
+- Google Digital Marketing Fundamentals

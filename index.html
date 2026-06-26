@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RecruitAI – Resume Screener</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">Recruit<span>AI</span></div>
+    <nav>
+      <a href="#how">How it works</a>
+      <a href="#screener" class="btn-nav">Start Screening</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-tag">AI-Powered Hiring Tool</div>
+    <h1>Find the <em>right</em> candidate,<br/>not just the closest match.</h1>
+    <p class="hero-sub">Upload resumes, describe the role — RecruitAI ranks candidates by true fit using Claude AI, not just keyword counting.</p>
+    <a href="#screener" class="btn-primary">Start Screening ↓</a>
+    <div class="hero-stats">
+      <div><strong>Multi-resume</strong><span>Upload up to 10 at once</span></div>
+      <div><strong>AI-ranked</strong><span>With reasoning per candidate</span></div>
+      <div><strong>Instant</strong><span>Results in seconds</span></div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how" id="how">
+    <h2>How it works</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h3>Paste the Job Description</h3>
+        <p>Describe the role, required skills, experience level, and any must-haves.</p>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h3>Upload Resumes</h3>
+        <p>Upload multiple .txt resume files. The AI reads and parses each one.</p>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h3>Get Ranked Results</h3>
+        <p>Candidates are scored, ranked, and explained — ready for your review.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCREENER TOOL -->
+  <section class="screener" id="screener">
+    <div class="screener-inner">
+      <h2>Resume Screener</h2>
+      <p class="screener-sub">Fill in your API key, job description, and upload resumes to begin.</p>
+
+      <!-- API KEY -->
+      <div class="field-group">
+        <label for="apiKey">Anthropic API Key <span class="required">*</span></label>
+        <input type="password" id="apiKey" placeholder="sk-ant-..." autocomplete="off"/>
+        <small>Your key is never stored or sent anywhere except directly to Anthropic's API.</small>
+      </div>
+
+      <!-- JOB DESCRIPTION -->
+      <div class="field-group">
+        <label for="jobDesc">Job Description <span class="required">*</span></label>
+        <textarea id="jobDesc" rows="7" placeholder="e.g. We're hiring a Senior Frontend Developer with 3+ years of React experience, strong TypeScript skills, experience with REST APIs, and ideally some knowledge of Node.js. The candidate should be comfortable working in an agile team..."></textarea>
+      </div>
+
+      <!-- RESUME UPLOAD -->
+      <div class="field-group">
+        <label>Upload Resumes (.txt files) <span class="required">*</span></label>
+        <div class="upload-zone" id="uploadZone">
+          <div class="upload-icon">📄</div>
+          <p>Drag & drop .txt resume files here</p>
+          <span>or</span>
+          <label class="btn-upload" for="fileInput">Browse Files</label>
+          <input type="file" id="fileInput" accept=".txt" multiple hidden/>
+        </div>
+        <div class="file-list" id="fileList"></div>
+      </div>
+
+      <!-- SUBMIT -->
+      <button class="btn-screen" id="screenBtn" onclick="runScreening()">
+        <span id="btnText">Screen Resumes</span>
+        <span id="btnLoader" class="loader hidden"></span>
+      </button>
+
+      <!-- ERROR -->
+      <div class="error-box hidden" id="errorBox"></div>
+    </div>
+  </section>
+
+  <!-- RESULTS -->
+  <section class="results hidden" id="resultsSection">
+    <div class="results-header">
+      <h2>Screening Results</h2>
+      <button class="btn-reset" onclick="resetScreener()">← New Screening</button>
+    </div>
+    <div class="results-grid" id="resultsGrid"></div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Built with Claude AI · RecruitAI · <a href="#screener">Back to top ↑</a></p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
